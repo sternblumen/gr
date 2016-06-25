@@ -2,19 +2,43 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 
-.container,
-.container-fluid {
+body { padding-top: 70px; }
+
+// .container {
+// 	@media (min-width: 1200px) {
+//     	width: 1180px;
+// 	}
+
+// 	@media (min-width: 1180px) {
+//     	width: 1180px;
+// 	}
+
+// 	@media (max-width: 991px) {
+//     	width: 768px;
+// 	}
+// }
+
+.img-responsive {
+  @include img-responsive;
+  width: 100%;
+}
+
+.br {
+  background-color: rgba(255,0,0,.15);
+}
+
+.ob {
   border: 1px solid blue;
 }
 
-.col-xs-1 {
-  background-color: rgba(255,0,0,.15);
-  border: 1px solid black;
+.or {
+  border: 1px solid red;
 }
 
-.inner {
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid rgba(86,61,124,.2);
-  height: 100px;
+.og {
+  border: 1px solid green;
 }
+
+
+
 

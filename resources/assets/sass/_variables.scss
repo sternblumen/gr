@@ -2,14 +2,14 @@ $grid-columns:               12;
 $grid-gutter-width:          8px;
 
 
-$container-tablet:           (720px + $grid-gutter-width) !default;
-$container-sm:               $container-tablet !default;
+$container-tablet:           (744px + $grid-gutter-width);
+$container-sm:               $container-tablet;
 
-$container-desktop:          (940px + $grid-gutter-width) !default;
-$container-md:               $container-desktop !default;
+$container-desktop:          (1172px + $grid-gutter-width);
+$container-md:               $container-desktop;
 
-$container-large-desktop:    (1180px + $grid-gutter-width) !default;
-$container-lg:               $container-large-desktop !default;
+$container-large-desktop:    (1172px + $grid-gutter-width);
+$container-lg:               $container-large-desktop;
 
 $brand-primary:              #337AB7;
 $brand-success:              #5CB85C;
@@ -23,37 +23,37 @@ $brand-danger:               #D9534F;
 
 // Extra small screen / phone
 //** Deprecated `$screen-xs` as of v3.0.1
-$screen-xs:                  320px !default;
+$screen-xs:                  100px;
 //** Deprecated `$screen-xs-min` as of v3.2.0
-$screen-xs-min:              $screen-xs !default;
+$screen-xs-min:              $screen-xs;
 //** Deprecated `$screen-phone` as of v3.0.1
-$screen-phone:               $screen-xs-min !default;
+$screen-phone:               $screen-xs-min;
 
 // Small screen / tablet
 //** Deprecated `$screen-sm` as of v3.0.1
-$screen-sm:                  768px !default;
-$screen-sm-min:              $screen-sm !default;
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
 //** Deprecated `$screen-tablet` as of v3.0.1
-$screen-tablet:              $screen-sm-min !default;
+$screen-tablet:              $screen-sm-min;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
-$screen-md-min:              $screen-md !default;
+$screen-md:                  1188px;
+$screen-md-min:              $screen-md;
 //** Deprecated `$screen-desktop` as of v3.0.1
-$screen-desktop:             $screen-md-min !default;
+$screen-desktop:             $screen-md-min;
 
 // Large screen / wide desktop
 //** Deprecated `$screen-lg` as of v3.0.1
-$screen-lg:                  1180px !default;
-$screen-lg-min:              $screen-lg !default;
+$screen-lg:                  1188px;
+$screen-lg-min:              $screen-lg;
 //** Deprecated `$screen-lg-desktop` as of v3.0.1
-$screen-lg-desktop:          $screen-lg-min !default;
+$screen-lg-desktop:          $screen-lg-min;
 
 // So media queries don't overlap when required, provide a maximum
-$screen-xs-max:              ($screen-sm-min - 1) !default;
-$screen-sm-max:              ($screen-md-min - 1) !default;
-$screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
 
 
 
