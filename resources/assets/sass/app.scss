@@ -2,7 +2,7 @@
 @import "variables";
 @import "bootstrap/bootstrap";
 
-body { padding-top: 70px; }
+body { padding-top: 80px; }
 
 // .container {
 // 	@media (min-width: 1200px) {
@@ -22,6 +22,43 @@ body { padding-top: 70px; }
   @include img-responsive;
   width: 100%;
 }
+
+.b-green{
+background: rgba(90,247,177,0.44);
+}
+.b-yellow{
+background: rgba(247,231,27,0.28);
+}
+.b-blue{
+background: rgba(57,133,222,0.39);
+}
+.b-turquesa{
+background: rgba(34,203,208,0.44);
+border: 1px solid DarkCyan;
+}
+.b-turquesa-dark{
+background: rgba(52,169,116,0.55);
+border: 1px solid DarkCyan;
+}
+
+
+.b-orange{
+background: rgba(255,152,99,0.34);
+border: 1px solid Coral;
+}
+.b-pink{
+background: rgba(239,24,158,0.34);
+border: 1px solid DeepPink;
+}
+.b-purple{
+background: rgba(106,32,172,0.33);
+border: 1px solid DarkOrchid;
+}
+
+.linio-header{
+	height: 50px;
+}
+
 
 .br {
   background-color: rgba(255,0,0,.15);
