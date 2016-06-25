@@ -2,6 +2,7 @@
   "devDependencies": {
     "babel": "^5.6.4",
     "babelify": "^6.1.2",
+    "browser-sync": "^2.13.0",
     "browserify": "^10.2.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",

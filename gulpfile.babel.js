@@ -8,9 +8,13 @@ import stylish from 'jshint-stylish';
 import source from 'vinyl-source-stream';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
+import browserSync from 'browser-sync';
 
 const SCRIPTS_DIR = 'resources/assets/js';
 const STYLES_DIR = 'resources/assets/sass';
+const PULIC_DIR = 'public';
+
+browserSync.create();
 
 /**
  * Handle error reporting
@@ -38,6 +42,13 @@ gulp.task('browserify', () => {
     .pipe(gulp.dest('./public/js'));
 });
 
+// Static Server + watching scss/html files
+gulp.task('serve', ['sass'], ()  => {
+    browserSync.init({ server: PULIC_DIR });
+    gulp.watch('public/*.html').on('change', browserSync.reload);
+});
+
+
 // Compile SASS and add vendor prefixes
 gulp.task('sass', () => {
   return gulp.src(STYLES_DIR+'/app.scss')
@@ -45,7 +56,8 @@ gulp.task('sass', () => {
     .pipe(sass({ outputStyle: 'compressed' }).on('error', handleError))
     .pipe(autoprefixer('last 10 versions'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./public/css'));
+    .pipe(gulp.dest('./public/css'))
+    .pipe(browserSync.stream());
 });
 
 // Watch files for changes
@@ -55,4 +67,4 @@ gulp.task('watch', ['lint', 'browserify', 'sass'], () => {
 });
 
 // Default gulp task
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'serve']);
